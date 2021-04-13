@@ -12,4 +12,4 @@ TC-RENO modifies the clustering method of TrackCluster and expands the existing 
 
 ## Function extension:
 1. The defaut TrackCluster only identifies novel isoforms that intersect with the existing gene annotation. For those remaining reads that did not align to the existing isoforms, we developed a new function, de novo identification, to further cluster them together.
-2. We would save short isoforms with enough supporting reads rather than discard them directly.
+2. Short isoforms with enough supporting reads would be saved.
