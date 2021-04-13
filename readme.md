@@ -1,9 +1,9 @@
 # TC-RENO
 
-# Introduction <br>
-TC-RENO is designed for isoforms identification and quantification. The tool is based on the framework of TrackCluster. The detailed imporvements are as follows. <br>
+# Pipeline for isoforms identification and quantification <br>
+TC-RENO modifies the clustering method of TrackCluster and expands the existing functions. <br>
 
-## Improvement of TrackCluster:
+## Update the clustering method
 1. Existing isoforms reported in Araport11 would be clustered together even if the similarity score between the two isoforms is below the cut-off.
 2. The clustering result varied by the ordering of reads. Alteration of the read order results in a different number of supported reads (i.e. subreads) in the final identified isoform.
 3. Wrong method of computing isoforms’ supporting reads
