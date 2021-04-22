@@ -1,16 +1,6 @@
-#!/usr/bin/env python
-#-*- coding: utf-8 -*-
-# @Time    : 8/24/2018 1:32 PM
-# @Author  : Runsheng     
-# @File    : tracklist.py
 
-"""
-Functions to handel the IO of bigg list
-"""
 import re
-#import dask.dataframe as dd
 import sys
-# self import
 import pandas as pd
 import os
 from track import bigGenePred
