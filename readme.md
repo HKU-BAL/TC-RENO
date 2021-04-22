@@ -24,4 +24,5 @@ Noted: When identifying isoforms, the reference and reads are merged. So we use 
 ``` 
 python TC_RENO.py -i reads.bed   -r ref.bed -o isoforms.bed -q isoforms_exp.txt -tmp /dev/shm/tmp/
 ``` 
+The identified isoforms are saved in `isoforms.bed` and the corresponding support reads are saved in `isoforms_exp.txt`.<br>
 
