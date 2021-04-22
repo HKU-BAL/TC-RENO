@@ -1,10 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 8/9/2018 6:56 PM
-# @Author  : Runsheng     
-# @File    : utils.py
 
-# std library import
 import multiprocessing
 import subprocess
 import signal
