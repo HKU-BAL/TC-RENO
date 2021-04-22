@@ -7,7 +7,6 @@ import os
 from pre_cluster_round1 import *
 from utils import parmap
 
-#from trackcluster.batch import *
 
 
 def group_bigg_by_gene(bigglist):
