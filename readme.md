@@ -15,8 +15,11 @@ TC-RENO modifies the clustering method of TrackCluster and expands the existing 
 2. Short isoforms with enough supporting reads would be saved.
 
 # Quick start
+## 1. Preprocess
+Use bam2bigg.py to convert bam files to bed file.
+Use gff2bigg.py to convert gff files to bed file.
+## 2. Isoform identification and quantification
 ``` 
 python TC_RENO.py -i reads.bed   -r ref.bed -o isoforms.bed -q isoforms_exp.txt -tmp /dev/shm/tmp/
-
 ``` 
 
