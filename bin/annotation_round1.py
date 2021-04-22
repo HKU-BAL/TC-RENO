@@ -1,7 +1,7 @@
 import sys, argparse
 import sys
 import copy
-#sys.path.insert(0, "/mnt/bal19/qhli/RNA/TC_pipeline/bin/")
+
 
 from tracklist import read_bigg, write_bigg, bigglist_to_bedfile
 import collections
