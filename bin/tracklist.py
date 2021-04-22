@@ -1,14 +1,5 @@
-#!/usr/bin/env python
-#-*- coding: utf-8 -*-
-# @Time    : 8/24/2018 1:32 PM
-# @Author  : Runsheng     
-# @File    : tracklist.py
 
-"""
-Functions to handel the IO of bigg list
-"""
 import re
-# self import
 from track import bigGenePred
 from collections import OrderedDict
 from utils import myexe, set_tmp, del_files
