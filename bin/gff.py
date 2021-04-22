@@ -1,15 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 8/8/2018 2:44 PM
-# @Author  : Runsheng
-# @File    : gff.py
-
-"""
-Used to parser the gff gene terms and convert to bigGenePred object
-GFF is a collection of one large gff file
-"""
-
-# standard library import
 from collections import namedtuple, OrderedDict
 from operator import attrgetter
 
@@ -241,20 +229,6 @@ class GFF(object):
 
 
 
-
-class WormBaseGFF(GFF):
-    """
-    specific parser for WormBase GFF file, include:
-    un-sorted CDS and exon
-    mutiple parents:
-    mRNA (transcript):Parent=Gene:WBxxxxx
-    exon:Parent=Transcript:Y74C9A.3
-    CDS: same
-    intron: same
-    UTR: same
-
-    """
-    pass
 
 
 
