@@ -1,10 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 8/8/2018 2:44 PM
-# @Author  : Runsheng     
-# @File    : track.py
 
-# third part import
 from utils import set_tmp, chr_select, reverse_complement
 import os
 
