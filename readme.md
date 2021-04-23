@@ -1,18 +1,19 @@
 # TC-RENO
 
 # Pipeline for isoforms identification and quantification <br>
-TC-RENO modifies the clustering method of TrackCluster and expands the existing functions. <br>
+TC-RENO is optimized using the basics of TrackCluster (https://github.com/Runsheng/trackcluster) with modification in the clustering method and addition of novel functions. TC-RENO is used for nanopore DRS data. <br>
 
-## Update the clustering method
-1. Existing isoforms reported in Araport11 would be clustered together even if the similarity score between the two isoforms is below the cut-off.
-2. The clustering result varied by the ordering of reads. Alteration of the read order results in a different number of supported reads (i.e. subreads) in the final identified isoform.
-3. Wrong method of computing isoforms’ supporting reads
-4. TrackCluster mistakenly identifies some real isoforms as fragments and discarded them.
+## Updates of the clustering method
+1. The similarity matrix initialize value is changed to prevent two reads that do not intersect with each other from clustering together.  <br>
+2. For reads supporting multiple isoforms, its contribution would be shared evenly among all supported isoforms across genes, i.e 1/num of supported isoforms.<br>
+3. Each identified isoform has a fixed number of supporting reads, i.e, alteration of the input read order would not influence the clustering result.<br>
+4. Denominator of Score 2 is updated from the minimum length of two intersecting isoforms to the length of each isoform, which can avoid merging some real isoforms together, such that isoforms with shorter exons length are identified as fragments and removed.<br>
 
 
-## Function extension:
-1. The defaut TrackCluster only identifies novel isoforms that intersect with the existing gene annotation. For those remaining reads that did not align to the existing isoforms, we developed a new function, de novo identification, to further cluster them together.
-2. Short isoforms with enough supporting reads would be saved.
+## Function extension
+1. TC-RENO introduces ade novo isoforms discovery module, such that  not  only isoforms with existing genes intersect could be identified.<br>
+2. Not all short isoforms which are included in long isoforms would be discarded. This can toretain some short novel isoforms with more supported reads. TC-RENO classifies isoforms as “standard” and “high-confident” based on the number of support reads. Short isoforms with enough supporting reads (high-confident) would be saved, while other short reads without enough support would be regarded as fragments and discarded.<br>
+
 
 # Quick start
 ## 1. Preprocess
