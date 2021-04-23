@@ -104,7 +104,7 @@ def filter_D(D, bigg_list, cutoff=0.005):
             if D[i,j]<cutoff and "." not in bigg_list[i].name:
                 if i==j:
                     pass
-                elif bigg_list[i].exonlen<bigg_list[j].exonlen::
+                elif bigg_list[i].exonlen<bigg_list[j].exonlen:
                     drop.add(i)
                     bigg_list[j].subread.add(bigg_list[i].name)
                     bigg_list[j].subread=bigg_list[j].subread.union(bigg_list[i].subread)
@@ -112,7 +112,7 @@ def filter_D(D, bigg_list, cutoff=0.005):
             if D[i,j]<cutoff and "." not in bigg_list[i].name:
                 if i==j:
                     pass
-                elif bigg_list[i].exonlen<bigg_list[j].exonlen::
+                elif bigg_list[i].exonlen<bigg_list[j].exonlen:
                     drop.add(i)
                     bigg_list[j].subread.add(bigg_list[i].name)
                     bigg_list[j].subread=bigg_list[j].subread.union(bigg_list[i].subread)
