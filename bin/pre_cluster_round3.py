@@ -101,7 +101,7 @@ def filter_D(D, bigg_list, cutoff=0.005):
     ij_list=getij(D)
     for n in range(5):
         for i,j in ij_list:
-            if D[i,j]<cutoff:
+            if D[i,j]<cutoff and "." not in bigg_list[i].name:
                 if i==j:
                     pass
                 else:
@@ -109,7 +109,7 @@ def filter_D(D, bigg_list, cutoff=0.005):
                     bigg_list[j].subread.add(bigg_list[i].name)
                     bigg_list[j].subread=bigg_list[j].subread.union(bigg_list[i].subread)
         for i,j in reversed(ij_list):
-            if D[i,j]<cutoff:
+            if D[i,j]<cutoff and "." not in bigg_list[i].name:
                 if i==j:
                     pass
                 else:
