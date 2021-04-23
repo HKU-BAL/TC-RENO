@@ -14,7 +14,7 @@ Example:<br>
 
 ## Function extension
 1. TC-RENO introduces ade novo isoforms discovery module, such that  not  only isoforms with existing genes intersect could be identified.<br>
-2. Not all short isoforms which are included in long isoforms would be discarded. This can toretain some short novel isoforms with more supported reads. TC-RENO classifies isoforms as “standard” and “high-confident” based on the number of support reads. Short isoforms with enough supporting reads (high-confident) would be saved, while other short reads without enough support would be regarded as fragments and discarded.<br>
+2. Not all short isoforms which are included in long isoforms would be discarded. This can toretain some short novel isoforms with more supported reads. TC-RENO classifies isoforms as “standard” and “high-confident” based on the number of support reads. Short isoforms with enough supporting reads (high-confident) would be saved, while other short reads would be regarded as fragments and discarded.<br>
 
 
 # Quick start
