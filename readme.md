@@ -9,7 +9,7 @@ TC-RENO is optimized using the basics of TrackCluster (https://github.com/Runshe
 3. Each identified isoform has a fixed number of supporting reads, i.e, alteration of the input read order would not influence the clustering result.<br>
 4. Denominator of Score 2 is updated from the minimum length of two intersecting isoforms to the length of each isoform, which can avoid merging some real isoforms together, such that isoforms with shorter exons length are identified as fragments and removed.<br>
 Example:
-![Workflow](http://www.bio8.cs.hku.hk/RNA/isoform_github.png)<br> 
+
 
 ## Function extension
 1. TC-RENO introduces ade novo isoforms discovery module, such that  not  only isoforms with existing genes intersect could be identified.<br>
