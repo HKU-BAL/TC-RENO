@@ -21,7 +21,7 @@ Example:<br>
 ## 1. Preprocess
 Use `bam2bigg.py` of TrackCluster to convert bam files to bed file (reads.bed).<br>
 Use `gff2bigg.py` of TrackCluster to convert gff files to bed file (ref.bed).<br>
-Noted: When identifying isoforms, the reference and reads are merged. So we use "." to distinguish reads and reference. The forth column of in ref.bed should include ".";  "." should not exist in the fourth column of the reads.bed file.
+Noted: When identifying isoforms, the reference and reads are merged. So we use "." to distinguish reads and reference. The forth column of the ref.bed should include ".";  "." should not exist in the fourth column of the reads.bed file.
 
 ## 2. Isoform identification and quantification
 ``` 
