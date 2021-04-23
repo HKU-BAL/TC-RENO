@@ -1,6 +1,6 @@
 # TC-RENO
 
-# Pipeline for isoforms identification and quantification <br>
+# Overview <br>
 TC-RENO is optimized using the basics of TrackCluster (https://github.com/Runsheng/trackcluster) with modification in the clustering method and addition of novel functions. TC-RENO is used for nanopore DRS data. <br>
 
 ## Updates of the clustering method
