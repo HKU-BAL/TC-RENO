@@ -41,27 +41,6 @@ def select_D(D, keep):
 
     return D
 
-def prefilter_smallexon(bigg_list,bigg_list_gff, cutoff=50):
-    if len(bigg_list_gff)==0:
-        return bigg_list
-    strand=bigg_list_gff[0].strand
-    bigg_list_strand=[x for x in bigg_list if 1==1]
-    if len(bigg_list_strand)==0:
-        return None
-    nano_exon, nano_intron=bigglist_to_bedfile(bigg_list_strand)
-    gff_exon, gff_intron=bigglist_to_bedfile(bigg_list_gff)
-    exonfile=wrapper_bedtools_intersect2(nano_exon, gff_exon)
-    out_d=pandas_summary1(exonfile)
-    keep_name=set()
-    for k, intersection in out_d.items():
-        nano_name, gff_name=k
-        if intersection > cutoff:
-            keep_name.add(nano_name)
-    bigg_list_new=[]
-    for bigg in bigg_list:
-        if bigg.name in keep_name:
-            bigg_list_new.append(bigg)
-
 
 def cal_distance(bigg_list, intronweight=2.3):
     bigg_list.sort(key=operator.attrgetter("chromStart"))
