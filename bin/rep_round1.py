@@ -47,21 +47,6 @@ for file in files:
         if rep != line[3]:
            subreads_rep[line[3]].add(rep)               
     f.close()
-    '''
-    file_name = file.split('.')[0]
-    f = open(path1 + file_name +'/' + file_name + '_nano.bed','r')
-    for line in f.readlines():
-        info = line.strip()
-        line = line.strip().split('\t')
-        read_info[line[3]] = info + '\n'
-    f.close()
-    f = open(path1 + file_name +'/' + file_name + '_gff.bed','r')
-    for line in f.readlines():
-        info = line.strip()
-        line = line.strip().split('\t')
-        read_info[line[3]] = info + '\n'
-    f.close()
-    '''
 
 all_reads = set()
 f = open(sys.argv[3],'r')
@@ -103,9 +88,8 @@ f_write1.close()
 f_write_short.close()
 
 remain = all_reads - gene_reads
-print len(remain)#,# gene_reads - all_reads
+
 for r in remain:
-#    print r
     information = read_info[r].split('\t')
     f_novel.write(information[0] + '\t' + information[1] + '\t' + information[2] + '\t' + information[3] + '\t' + information[4] + '\t' + information[5] +'\n')
 f_novel.close()
