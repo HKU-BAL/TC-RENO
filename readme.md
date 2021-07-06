@@ -28,7 +28,7 @@ bedtools sort -i ref.bed |bedtools merge -s -c 4 -o distinct -i - | awk '{OFS="\
 
 ## 2. Isoform identification and quantification
 ``` 
-python TC_RENO.py -i reads.bed   -r merged_ref.bed -o isoforms.bed -q isoforms_exp.txt -tmp /dev/shm/tmp/
+python TC_RENO.py -i reads.bed   -r merged_ref.bed -o isoforms.bed -q isoforms_exp.txt -tmp /tmp/ -t 2 
 ``` 
 The identified isoforms are saved in `isoforms.bed` and the corresponding supporting reads are saved in `isoforms_exp.txt`.<br>
 
