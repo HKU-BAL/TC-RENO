@@ -21,11 +21,14 @@ Example:<br>
 ## 1. Preprocess
 Use `bam2bigg.py` of TrackCluster to convert bam files to bed file (reads.bed).<br>
 Use `gff2bigg.py` of TrackCluster to convert reference gff files to bed file (ref.bed).<br>
-Noted: When identifying isoforms, the reference and reads are merged. So we use "." to distinguish reads and reference. The forth column of the ref.bed should include ".";  "." should not appear in the fourth column of the reads.bed file.
+Then, the overlaping reference regions will be merged together
+``` 
+bedtools sort -i ref.bed |bedtools merge -s -c 4 -o distinct -i - | awk '{OFS="\t"}{print $1, $2,$3,$1":"$2"-"$3, 0, $4}' > merged_ref.bed
+```
 
 ## 2. Isoform identification and quantification
 ``` 
-python TC_RENO.py -i reads.bed   -r ref.bed -o isoforms.bed -q isoforms_exp.txt -tmp /dev/shm/tmp/
+python TC_RENO.py -i reads.bed   -r merged_ref.bed -o isoforms.bed -q isoforms_exp.txt -tmp /dev/shm/tmp/
 ``` 
 The identified isoforms are saved in `isoforms.bed` and the corresponding supporting reads are saved in `isoforms_exp.txt`.<br>
 
