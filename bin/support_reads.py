@@ -72,8 +72,6 @@ for r in read_num:
 f_write2.close()
 
 
-
-
 f_write1.write('isoform\tsupport_reads\tread_count\n')
 f = open(path + '/rep_round2.support.bed','r')
 for line in f.readlines():
