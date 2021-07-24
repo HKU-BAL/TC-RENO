@@ -12,10 +12,10 @@ if __name__ == '__main__':
     parser.add_argument('-bed',type=str, default='bedtools')
     parser.add_argument('-w',type= str,default="2.3", help='weight of intron')
     parser.add_argument('-t',type=str, default='1', help='number of threads')
-    parser.add_argument('-s1',type=str, default='3', help="number of isoforms' support reads")
-    parser.add_argument('-s2',type=str, default='5', help="number of short isoforms' support reads")
+    parser.add_argument('-s1',type=str, default='6', help="number of isoforms' support reads")
+    parser.add_argument('-s2',type=str, default='10', help="number of short isoforms' support reads")
     parser.add_argument('-q',required=True, help="file of read count of isoforms")
-    parser.add_argument('-s',type=str, default='3', help='number of support reads')
+
     args = parser.parse_args() 
     args, unknown = parser.parse_known_args()
 
