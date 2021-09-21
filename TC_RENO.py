@@ -31,7 +31,7 @@ if __name__ == '__main__':
     subprocess.call(merge_command, stdout=open(args.tmp+'/merge_round1.bed', 'w'))
     subprocess.call([sys.executable, 'bin/annotation_round2.py',args.tmp,args.i])
     subprocess.call([sys.executable, 'bin/cluster1.py',args.tmp+"/annotation_round2/", args.tmp+"/cluster_round2_TC_RENO/",args.w,args.t,args.tmp+'/cluster_tmp/'])
-    subprocess.call([sys.executable, 'bin/rep_round2.py',args.tmp])
+    subprocess.call([sys.executable, 'bin/rep_round2.py',args.tmp,args.s1])
     subprocess.call([sys.executable, 'bin/cluster2.py',args.tmp+"/annotation_round3/", args.tmp+"/cluster_round3_TC_RENO/",args.w,args.t,args.tmp+'/cluster_tmp/'])
     subprocess.call([sys.executable, 'bin/support_reads.py',args.tmp,args.o,args.q,args.s1, args.s2, args.i])
 
