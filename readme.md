@@ -2,7 +2,6 @@
 
 # Overview <br>
 TC-RENO is optimized using the basics of TrackCluster (https://github.com/Runsheng/trackcluster) with modification in the clustering method and addition of novel functions. TC-RENO is used for nanopore DRS data. <br>
-Workflow:<br>
  ![example](http://www.bio8.cs.hku.hk/novel/TC_RENO_workflow.png)<br> 
 
 ## Updates of the clustering method
